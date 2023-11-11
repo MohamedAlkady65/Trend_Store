@@ -1,0 +1,95 @@
+.contact {
+    margin: 40px 0;
+}
+.contact .container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact .title
+{
+    color: var(--default-color);
+    font-size: 50px;
+}
+
+.contact .parent{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 2px 2px 10px silver;
+    border-radius: 10px;
+    padding:20px ;
+    max-width: 80%;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 600px;
+    max-width: 100%;
+    border-radius: 20px;
+    gap: 40px;
+}
+form textarea{
+    width: 100%;
+    background-color: var(--input-color);
+    border: 1px solid var(--disabled-color);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    height: 300px;
+    resize: none;
+}
+form input{
+    background-color: var(--default-color);
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    font-size: 25px;
+    width: 100%;
+}
+form input:hover{
+    background-color: var(--hover-color);
+}
+
+@media (max-width:550px) {
+    .contact .title
+{
+    font-size: 40px;
+}
+form textarea{
+
+    font-size: 14px;
+
+}
+form input{
+
+    font-size: 20px;
+
+}
+
+}
+
+@media (max-width:400px) {
+    .contact .title
+{
+    font-size: 30px;
+}
+form textarea{
+
+    font-size: 11px;
+
+}
+form input{
+
+    font-size: 16px;
+
+}
+
+}

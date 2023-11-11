@@ -1,0 +1,183 @@
+:root {
+    --default-color:#7988FD;
+    --hover-color:#5865d9;
+    --disabled-color:#949494;
+    --input-color:#E8E8E8;
+  }
+
+  .section .main .content {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.inp-box{
+    position: relative;
+    width:  100%;
+    height: 50px;
+}
+.inp-box input{
+width: 100%;
+height: 100%;
+border: 2px solid var(--default-color); 
+border-radius: 5px;
+padding-left: 10px;
+font-size: 25px;
+
+}
+
+
+.inp-box input:focus + .title,
+.inp-box input.foucs + .title{
+top: 0;
+transform: translateY(-50%);
+font-size: 16px;
+color: var(--default-color);
+
+} 
+
+
+
+
+
+.inp-box .title{
+background-color: white;
+position: absolute;
+color: var(--disabled-color);
+left: 10px;
+top: 50%;
+transform: translateY(-50%);
+font-size: 25px;
+transition-duration: 0.3s;
+padding: 0 3px;
+user-select: none;
+cursor:text;
+}
+
+.sel-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+}
+
+
+.sel-box select{
+width: 100%;
+height: 100%;
+border: 2px solid var(--default-color); 
+border-radius: 5px;
+padding-left: 10px;
+font-size: 25px;
+
+}
+
+
+.sel-box select.foucs + .title{
+background-color: white;
+position: absolute;
+left: 10px;
+transition-duration: 0.3s;
+padding: 0 3px;
+user-select: none;
+cursor:text;
+top: 0;
+transform: translateY(-50%);
+font-size: 16px;
+color: var(--default-color);
+
+}
+
+
+
+
+
+
+form
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    width: 300px;
+    align-self: center;
+}
+
+
+form input[type="submit"]
+{
+background-color: var(--default-color);
+color: white;
+font-weight: 600;
+font-size: 25px;
+border-radius: 5px;
+padding: 10px;
+width: 100%;
+transition-duration: 0.3s;
+cursor: pointer;
+}
+form  input[type="submit"]:hover
+{
+    background-color: var(--hover-color);
+}
+
+
+.inp-box.null input {
+    border-color: #dc3545 ;
+}
+.inp-box.null .title{
+    color: #dc3545 ;
+}
+
+.inp-box.null .title,
+.inp-box.null input:focus + .title,
+.inp-box.null input.foucs + .title{
+    top: 0;
+    transform: translateY(-50%);
+    font-size: 16px;  
+    color: #dc3545 ;  
+} 
+    
+
+
+.ph-box.not-valid input {
+    border-color: #dc3545 ;
+}
+.ph-box.not-valid .title{
+    color: #dc3545 ;
+}
+
+.ph-box.not-valid .title,
+.ph-box.not-valid input:focus + .title,
+.ph-box.not-valid input.foucs + .title{
+    top: 0;
+    transform: translateY(-50%);
+    font-size: 16px;  
+    color: #dc3545 ;  
+} 
+    
+    
+.ph-box {
+    width: 100%;
+
+}
+.ph-box p{
+    margin: 10px 0 0 5px;
+    display: none;
+    color: #dc3545 ;
+    font-size: 14px;
+
+}
+    
+.ph-box.not-valid p{
+    display: block;
+
+}
+
+@media (max-width:750px) {
+    form
+    {
+        width: 100%;
+    }
+    
+    
+}

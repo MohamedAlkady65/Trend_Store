@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../../css/all.min.css" />
+    <link rel="stylesheet" href="../../css/normalize.css" />
+    <link rel="stylesheet" href="../../css/master.css" />
+    <link rel="stylesheet" href="../../css/Dashboard/dash.css" />
+    <link rel="stylesheet" href="../../css/Dashboard/cates.css" />
+    <link rel="icon" href="../../images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+        <title>Dashboard - Categories</title>
+
+</head>
+
+<body>
+
+    <div class="page">
+
+
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a class="active" href="categories.html">
+                        <i class="fa-solid fa-rectangle-list"></i>
+                        <span>Categories</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="products.html">
+                        <i class="fa-solid fa-box"></i>
+                        <span>Products</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="orders.html">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span>Orders</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="users.html">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Users</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="../../php/sign/signout.php">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span>Exit</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <ul class="tabs">
+                <li class="active">
+                    <a href="#">Categories</a>
+                </li>
+                <li>
+                    <a href="subcategories.html">Sub-Categories</a>
+                </li>
+            </ul>
+            <div class="parent ">
+
+                <div class="for-pad">
+                    <div class="table">
+                        <div class="table-head">
+                            <div class="row">
+                                <div class="head-cell">Cat ID</div>
+                                <div class="head-cell">Cat Name</div>
+                                <div class="head-cell"></div>
+                            </div>
+                        </div>
+
+                        <div class="table-body">
+
+<!--                                                     
+                            <div class="row" data-cateid="1">
+                                <div class="body-cell">#123</div>
+                                <div class="body-cell">
+                                    <span class="cat-name">asd</span>
+                                    <input type="text" class="edit-input" >
+                                </div>
+                                <div class="body-cell">
+                                    <span class="edit-btn btn">Edit</span>
+                                    <span class="fin-edit-btn btn">Edit</span>
+                                    <span class="delete-btn btn">Delete</span>
+                                    <span class="cancel-btn btn">Cancel</span>
+                                </div>
+                            </div>
+                         -->
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="for-pad">
+                    <div class="add-cate">
+                        <h3>Add Category</h3>
+                        <form action="../../php/dash_board/add_cate.php" id="form-add-cate" method="post">
+                            <input type="text" placeholder="Category Name" name="input-cate-name" id="input-cate-name">
+                            <input type="submit" value="Add">
+                        </form>
+                        <div></div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="pop-up " id="pop-up-edit-cate">
+        <div></div>
+        <p>Are You Sure To Edit Categotry</p>
+        <div class="pop-up-btns">
+            <input type="button" value="OK" class="ok-btn-pop">
+            <input type="button" value="CANCEL" class="cancel-btn-pop">
+        </div>
+    </div>
+
+
+
+    <div class="pop-up " id="pop-up-delete-cate">
+        <div></div>
+        <div>
+            <p>Are You Sure To Delete Categotry</p>
+            <span>This Will Delete All Products In This Category</span>
+        </div>
+        <div class="pop-up-btns">
+            <input type="button" value="OK" class="ok-btn-pop">
+            <input type="button" value="CANCEL" class="cancel-btn-pop">
+        </div>
+    </div>
+
+
+    <div class="pop-up" id="pop-up-alert">
+        <div></div>
+        <div>
+            <p></p>
+        </div>
+        <div class="pop-up-btns">
+            <input type="button" value="OK" class="ok-btn-pop">
+        </div>
+    </div>
+
+
+
+
+    <div class="overlay "></div>
+
+    <script src="../../js/Dashboard/cates.js"> </script>
+</body>
+
+</html>

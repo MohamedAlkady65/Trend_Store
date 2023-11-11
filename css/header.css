@@ -1,0 +1,379 @@
+/* Start Header */
+.header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 100;
+  border-bottom: 1px solid var(--input-color);
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
+}
+.header .container {
+  background-color: white;
+  padding-top: 10px;
+  position: relative;
+}
+.header .up {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  height: 40px;
+  margin-bottom: 30px;
+}
+
+.header .logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header .logo img {
+  height: 100%;
+}
+
+.header .srch-box {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  height: 100%;
+}
+
+.header .srch-box .srch-cont {
+  display: flex;
+  width: 300px;
+  margin-right: 10px;
+}
+
+.header .srch-text {
+  position: relative;
+  height: 100%;
+  flex: 1;
+}
+
+.header .srch-text input {
+  background-color: var(--input-color);
+  padding: 10px 10px 10px 25px;
+  border: 1px solid var(--disabled-color);
+  border-right: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  height: 100%;
+  width: 100%;
+}
+
+.header .srch-text i {
+  position: absolute;
+  top: 50%;
+  left: 6px;
+  transform: translateY(-50%);
+  color: #949494;
+}
+
+.header .srch-btn {
+  position: relative;
+  height: 100%;
+  cursor: pointer;
+}
+
+.header .srch-btn input {
+  width: 40px;
+  border: 0;
+  background-color: var(--default-color);
+  height: 100%;
+  cursor: pointer;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition-duration: 0.2s;
+}
+
+.header .srch-btn:hover input {
+  background-color: var(--hover-color);
+}
+
+.header .srch-btn::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.header .menu-btn {
+  display: inline-block;
+  min-width: 30px;
+  height: 30px;
+  background-color: var(--default-color);
+  border-radius: 5px;
+  position: relative;
+  display: none;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  order: 3;
+}
+
+.header .menu-btn:hover {
+  background-color: var(--hover-color);
+}
+
+.header .menu-btn::before {
+  position: absolute;
+  font-size: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.header .btns {
+  display: flex;
+  gap: 5px;
+}
+
+.header .btns a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid var(--default-color);
+  border-radius: 5px;
+  position: relative;
+  transition-duration: 0.2s;
+}
+
+.header .btns a:hover {
+  border-color: var(--hover-color);
+}
+
+.header .btns a:hover::before {
+  color: var(--hover-color);
+}
+
+.header .btns a::before {
+  position: absolute;
+  font-size: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--default-color);
+}
+
+.header .cart-btn .count {
+  position: absolute;
+  font-size: 8px;
+  color: white;
+  background-color: #dc3545;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 12px;
+  top: 2px;
+  padding: 2px 3px;
+  right: 2px;
+}
+
+.header .nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.header .nav-links > li {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.header .nav-links li a {
+  color: black;
+  padding: 10px;
+  transition-duration: 0.3s;
+}
+.header .nav-links li a:hover {
+  color: var(--hover-color);
+}
+.header .nav-links li:hover {
+}
+.header .cat-link:hover > a,
+.header .cat-link:hover > i {
+  color: var(--hover-color);
+}
+
+.header .cat-link {
+  padding-right: 20px;
+  position: relative;
+  cursor: pointer;
+}
+.header .cat-link span {
+  transition-duration: 0.3s;
+}
+.header .cat-link:hover span {
+  color: var(--hover-color);
+}
+
+.header .cat-link .cat-list.active,
+.header .cat-link:hover .cat-list {
+  display: block;
+}
+
+.header .cat-list {
+  display: none;
+  position: absolute;
+  top: 29px;
+  left: -5px;
+  background-color: #f6f6f6;
+  width: 150px;
+  font-size: 13px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
+}
+
+.header .cat-list li a {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 10px;
+  transition-duration: 0.3s;
+}
+
+.header .cat-list li a:hover {
+  padding-left: 15px;
+  color: var(--hover-color);
+  border-color: var(--hover-color);
+}
+
+@media (max-width: 750px) {
+  .header .container {
+    padding-bottom: 10px;
+  }
+
+  .header .up {
+    flex-wrap: wrap;
+    min-height: 100px;
+    justify-content: space-between;
+    align-content: center;
+    margin: 0;
+  }
+
+  .header .logo {
+    height: 50%;
+    font-size: 22px;
+  }
+
+  .header .srch-box {
+    order: 3;
+    width: 100%;
+    height: 50%;
+    margin-top: 10px;
+    height: 30px;
+  }
+
+  .header .menu-btn {
+    display: inline-block;
+  }
+
+  .header .down {
+    position: fixed;
+    width: 200px;
+    top: 0;
+    height: 100vh;
+    left: -700px;
+    background-color: rgb(244, 244, 244);
+    transition-duration: 0.3s;
+    z-index: 600;
+    padding: 10px;
+  }
+
+  .header .down.active {
+    left: 0;
+  }
+
+  .header .nav-links {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .header .nav-links > li {
+    padding: 0;
+  }
+
+  .header .nav-links li a {
+    display: inline-block;
+    padding: 20px 20px 20px 10px;
+    width: 100%;
+  }
+
+  .header .cat-link {
+    width: 70%;
+    position: relative;
+  }
+
+  .header .cat-link a {
+  }
+
+  .header .cat-link i {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 100;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.3s;
+  }
+  .header .cat-link i:hover {
+    color: var(--hover-color);
+  }
+
+  .header .cat-link:hover .cat-list {
+    display: none;
+  }
+
+  .header .cat-link .cat-list.act {
+    display: block;
+  }
+
+  .header .cat-list {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 143%;
+  }
+
+  .header .cat-list li a {
+    padding: 15px 10px;
+    border: 0;
+  }
+
+  .header .cat-list li {
+    padding-left: 10px;
+  }
+}
+@media (max-width: 400px) {
+  .header .logo {
+    font-size: 18px;
+  }
+  .header .btns a {
+    width: 30px;
+    height: 30px;
+  }
+  .header .logo img {
+    height: 85%;
+  }
+}
+
+.over-header.active {
+  position: fixed;
+  opacity: 0.7;
+  background-color: black;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 500;
+}
+/* End Header */

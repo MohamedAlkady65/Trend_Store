@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../js/check_session.js"></script>
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/master.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/checkout.css" />
+    <link rel="icon" href="../images/logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet" />
+
+        <title>CheckOut - Trend Store</title>
+    </head>
+
+<body>
+ 
+
+    <nav class="header">
+
+        <div class="over-header"></div>
+  
+        <div class="container">
+  
+            <div class="up">
+  
+                <a class="logo" href="home.html">
+                    <img src="../images/logo.svg" alt="">
+                    Trend Store
+                </a>
+  
+                <div class="srch-box">
+  
+                    <div class="menu-btn fa-solid fa-bars"></div>
+  
+                    <div class="srch-cont">
+                        <div class="srch-text">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" placeholder="Search">
+                        </div>
+    
+                        <div class="srch-btn fa-solid fa-magnifying-glass">
+                            <input type="button">
+                        </div>
+                    </div>
+  
+  
+  
+                </div>
+  
+  
+                <div class="btns">
+                    <a href="cart.html" class="cart-btn fa-solid fa-cart-shopping">
+                        <span class="count">1</span>
+                    </a>
+                    <a href="account_details.html" class="account-btn fa-regular fa-user"></a>
+                </div>
+  
+            </div>
+  
+            <div class="down">
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li class="cat-link ">
+                        <a class="cat-link-text" href="products.html">Products</a>
+                        <i class="fa-sharp fa-solid fa-chevron-down drop-cate-btn"></i>
+  
+                        <ul class="cat-list">
+                        </ul>
+                    </li>
+                    <li><a href="account_details.html">Account</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+  
+  
+        </div>
+    </nav>
+  
+    <div class="container">
+        <div class="head">
+            <h2>CheckOut</h2>
+        </div>
+        <div class="content">
+
+            <div class="check-up">
+                <div class="sel-box">
+                    <select  id="select-address">
+                        <option value="">Egypt/Mansoura/seket Sandoub/B123/01030212/lmkdsfcs</option>
+                        <option value="">123</option>
+                        <option value="">123</option>
+                    </select>
+                    <span class="title">Address</span>
+                </div>
+                <a href="account_add_address.html" class="btn">Add New Address</a>
+            </div>
+
+            <div class="check-mid">
+
+                <div class="inp-box">
+                    <span>Country</span>
+                    <input type="text" value="" />
+                </div>
+
+
+
+                <div class="inp-box">
+                    <span>City</span>
+                    <input type="text" value="" />
+                </div>
+
+
+                <div class="inp-box">
+                    <span>Street</span>
+                    <input type="text" value="" />
+                </div>
+
+
+                <div class="inp-box">
+                    <span>Building</span>
+                    <input type="text" value="" />
+                </div>
+
+
+
+                <div class="inp-box ">
+                    <span>Phone</span>
+                    <input type="text"  value="" />
+                    <b class="inv-pho">Please Enter Valid Phone Number</b>
+                </div>
+
+
+                <div class="inp-box ">
+                    <span>Note</span>
+                    <input type="text"   value="" />
+                </div>
+
+
+
+            </div>
+
+
+            <div class="check-down">
+                <div class="tot">
+                    <span>Total Order Price :</span>
+                    <span id="total_price">61532331.00 $</span>
+                </div>
+                <div class="tot">
+                    <span>Total Order Items :</span>
+                    <span id="total_quant">4755</span>
+                </div>
+
+                <div class="payment">
+
+                    <p>Choose Payment Method</p>
+
+                    <div class="icons">
+
+                        <div class="one">
+                            <i class="fa-sharp fa-solid fa-money-check-dollar"></i>
+                        </div>
+                        <div class="one">
+                            <img src="../images/payment_methods/Mastercard.svg" alt="">
+                        </div>
+                        <div class="one">
+                            <img src="../images/payment_methods/Visa.svg" alt="">
+                        </div>
+                        <div class="one">
+                            <img src="../images/payment_methods/PayPal.svg" alt="">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="submit">
+                    <input type="button" value="Order Now" id="order-now-btn" class="btn order-btn">
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+    <div class="pop-up" id="pop-up-alert">
+        <div></div>
+        <div>
+            <p>Your Order Is Complete!</p>
+        </div>
+        <div class="pop-up-btns">
+            <input type="button" value="OK" class="ok-btn-pop">
+        </div>
+    </div>
+
+
+
+    <div class="overlay"></div>
+
+    <footer>
+        <div class="content">
+            <div class="subContent">
+                <div class="logo">
+                    <img src="../images/logo.svg" alt="">
+                    <span>Trend Store</span>
+                </div>
+                <div class="shop">
+                    <h2>Social Media</h2>
+                    <ul>
+                        <il><i class="fab fa-facebook-f"></i>Facebook</il>
+                        <il><i class="fab fa-twitter"></i>twitter</il>
+                        <il><i class="fab fa-youtube"></i>Youtube</il>
+                    </ul>
+                </div>
+                <div class="shop catt">
+                    <h2>Shop</h2>
+                    <ul>
+                    </ul>
+                </div>
+                <div class="shop ">
+                    <h2>Supprt</h2>
+                    <ul>
+                        <il>FQ</il>
+                        <il>Shipping</il>
+                        <il><a style="color: var(--default-color);" href="#">Contact Us</a></il>
+                    </ul>
+                </div>
+                <div class="shop">
+                    <h2>Keep In Touch</h2>
+                    <ul>
+                        <il>Gmail@gmail.com</il>
+                        <il>01203571855</il>
+  
+                    </ul>
+                </div>
+  
+            </div>
+            <div class="container">
+                <hr>
+            </div>
+            <div>
+                <h5 style="text-align: center;margin: 0;padding: 10px 0 20px 0;">copyrights</h5>
+            </div>
+  
+        </div>
+    </footer>
+  
+  
+
+
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+    <script src="../js/loader.js"></script>
+    <script src="../js/header.js"></script>
+    <script src="../js/checkout.js"></script>
+</body>
+
+</html>

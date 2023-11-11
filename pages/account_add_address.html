@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../js/check_session.js"></script>
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/master.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/account.css" />
+    <link rel="stylesheet" href="../css/account_add_address.css" />
+    <link rel="icon" href="../images/logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <title>Account - Add Address</title>
+</head>
+
+<body>
+
+
+
+    <nav class="header">
+
+        <div class="over-header"></div>
+  
+        <div class="container">
+  
+            <div class="up">
+  
+                <a class="logo" href="home.html">
+                    <img src="../images/logo.svg" alt="">
+                    Trend Store
+                </a>
+  
+                <div class="srch-box">
+  
+                    <div class="menu-btn fa-solid fa-bars"></div>
+  
+                    <div class="srch-cont">
+                        <div class="srch-text">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" placeholder="Search">
+                        </div>
+    
+                        <div class="srch-btn fa-solid fa-magnifying-glass">
+                            <input type="button">
+                        </div>
+                    </div>
+  
+  
+  
+                </div>
+  
+  
+                <div class="btns">
+                    <a href="cart.html" class="cart-btn fa-solid fa-cart-shopping">
+                        <span class="count">1</span>
+                    </a>
+                    <a href="account_details.html" class="account-btn fa-regular fa-user"></a>
+                </div>
+  
+            </div>
+  
+            <div class="down">
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li class="cat-link ">
+                        <a class="cat-link-text" href="products.html">Products</a>
+                        <i class="fa-sharp fa-solid fa-chevron-down drop-cate-btn"></i>
+  
+                        <ul class="cat-list">
+                        </ul>
+                    </li>
+                    <li><a href="account_details.html">Account</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+  
+  
+        </div>
+    </nav>
+  
+  
+
+    <div class="container">
+        <div class="section">
+            <div class="head">
+                <h2>My Account</h2>
+            </div>
+            <div class="main">
+                <div class="side-bar">
+                    <ul>
+                        <li><a href="account_details.html"><i class=" fas fa-regular fa-user"></i> <span>Details</span>
+                            </a></li>
+                        <li><a href="account_my_address.html" class="active"><i
+                                    class=" fas fa-light fa-location-dot"></i> <span>Addresses</span> </a></li>
+                        <li><a href="account_orders.html"><i class="fa-solid fa-bag-shopping"></i> <span>Orders</span>
+                            </a></li>
+                        <li><a href="../php/sign/signout.php"><i class="fa-solid fa-right-from-bracket"></i> <span>Sign
+                                    Out</span> </a></li>
+                    </ul>
+                </div>
+                <div class="content">
+                    <h3>Add Address</h3>
+
+
+
+                    <form action="">
+
+                        <div class="sel-box ">
+                            <select name="country" id="country-select" class="foucs">
+                            </select>
+                            <span class="title">Country</span>
+                        </div>
+
+                        <div class="inp-box ">
+                            <input type="text" class="" name="city">
+                            <span class="title">City</span>
+                        </div>
+
+                        <div class="inp-box">
+                            <input type="text" class="" name="street">
+                            <span class="title">Street</span>
+                        </div>
+
+                        <div class="inp-box">
+                            <input type="text" class="" name="build">
+                            <span class="title">Building</span>
+                        </div>
+                        <div class="ph-box">
+                            <div class="inp-box">
+                                <input type="text" class="" name="phone">
+                                <span class="title">Phone</span>
+                            </div>
+                            <p>Please Enter Valid Phone Number</p>
+                        </div>
+
+
+                        <div class="inp-box">
+                            <input type="text" class="" name="note">
+                            <span class="title">Additional Note</span>
+                        </div>
+
+
+                        <input type="submit" value="Add">
+
+
+
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="content">
+            <div class="subContent">
+                <div class="logo">
+                    <img src="../images/logo.svg" alt="">
+                    <span>Trend Store</span>
+                </div>
+                <div class="shop">
+                    <h2>Social Media</h2>
+                    <ul>
+                        <il><i class="fab fa-facebook-f"></i>Facebook</il>
+                        <il><i class="fab fa-twitter"></i>twitter</il>
+                        <il><i class="fab fa-youtube"></i>Youtube</il>
+                    </ul>
+                </div>
+                <div class="shop catt">
+                    <h2>Shop</h2>
+                    <ul>
+                    </ul>
+                </div>
+                <div class="shop ">
+                    <h2>Supprt</h2>
+                    <ul>
+                        <il>FQ</il>
+                        <il>Shipping</il>
+                        <il><a style="color: var(--default-color);" href="#">Contact Us</a></il>
+                    </ul>
+                </div>
+                <div class="shop">
+                    <h2>Keep In Touch</h2>
+                    <ul>
+                        <il>Gmail@gmail.com</il>
+                        <il>01203571855</il>
+  
+                    </ul>
+                </div>
+  
+            </div>
+            <div class="container">
+                <hr>
+            </div>
+            <div>
+                <h5 style="text-align: center;margin: 0;padding: 10px 0 20px 0;">copyrights</h5>
+            </div>
+  
+        </div>
+    </footer>
+  
+  
+
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+    <script src="../js/loader.js"></script>
+
+    <script src="../js/check_session.js"></script>
+    <script src="../js/header.js"></script>
+    <script src="../js/account_add_address.js"></script>
+</body>
+
+</html>

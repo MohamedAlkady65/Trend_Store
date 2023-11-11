@@ -1,0 +1,305 @@
+
+.section .main .content.details .one h5
+{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 40px 0 20px 0;
+}
+.section .main .content.details  .one hr
+{
+border-color: var(--input-color);
+margin-bottom: 30px;
+}
+
+.section .main .content.details  .one .part form.info{
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+
+} 
+.section .main .content.details  .one .part form.info .up{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+} 
+.section .main .content.details .one .inp-box{
+    position: relative;} 
+.section .main .content.details  .one .inp-box span{
+    position: absolute;
+    font-size: 12px;
+    background-color: white;
+    color: var(--default-color);
+    font-weight: bold;
+    height: 21px;
+    line-height: 15px;
+    top: -10px;
+    left: 0px;
+    padding: 3px;
+} 
+.section .main .content.details .one .inp-box input{
+    background-color: var(--input-color);   
+    background-color: white;
+    padding: 20px 0 15px 15px;
+    border-bottom: 1px solid var(--default-color);
+    font-weight: 600;
+    border-radius:3px;
+    width: 100%;
+} 
+.section .main .content.details .one  .inp-box input:disabled
+{
+    color: black;
+}
+
+
+.section .main .content.details .one  form.info .up > div{
+    width: calc(93% / 3);
+} 
+
+
+
+
+.section .main .content.details .one  form.info.edit-now .inp-box.null input{
+    border-color: #dc3545 ;
+}
+.section .main .content.details .one  form.info.edit-now .inp-box.null span{
+    color: #dc3545 ;
+}
+
+
+.section .main .content.details .one  form.info.edit-now .ph-box.not-valid .inp-box input{
+    border-color: #dc3545 ;
+}
+.section .main .content.details .one  form.info.edit-now .ph-box.not-valid .inp-box span{
+    color: #dc3545 ;
+}
+
+.section .main .content.details .one  form.info  .ph-box  p{
+    margin: 10px 0 0 5px;
+    display: none;
+    color: #dc3545 ;
+    font-size: 12px;
+}
+.section .main .content.details .one  form.info.edit-now  .ph-box.not-valid p{
+    display: block;
+}
+
+
+
+
+.section .main .content.details  .one .part form.info .down
+{
+    display: flex;
+    justify-content: flex-end;
+}
+.section .main .content.details  .one .part .btn
+{
+position: relative;
+}
+.section .main .content.details  .one .part .btn input
+{
+background-color: var(--default-color);
+color: white;
+font-weight: 600;
+font-size: 20px;
+border-radius: 5px;
+padding: 5px;
+width: 150px;
+transition-duration: 0.3s;
+cursor: pointer;
+}
+.section .main .content.details  .one .part .btn:hover input
+{
+    background-color: var(--hover-color);
+}
+.section .main .content.details  .one .part .btn.cancel:hover input
+{
+    background-color: #747474;
+}
+.section .main .content.details  .one .part .btn i
+{
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+}
+
+
+
+.section .main .content.details  .one .part  .btn.edit
+{
+    display: block;
+}
+.section .main .content.details  .one .part  .btn.save,
+.section .main .content.details  .one .part .btn.cancel
+{
+    display: none;
+}
+
+.section .main .content.details  .one .part form.edit-now .btn.save,
+.section .main .content.details  .one .part form.edit-now .btn.cancel
+{
+    display: block;
+}
+.section .main .content.details  .one .part form.edit-now .btn.edit
+{
+    display: none;
+}
+
+
+
+.section .main .content.details  .one .part  .btn.cancel
+{
+    margin: 0 0 0 10px;
+}
+.section .main .content.details  .one .part  .btn.cancel input
+{
+    width: 100px;
+    background-color: var(--disabled-color);
+
+}
+
+.section .main .content.details  .one .part form.edit-now  .up div span{
+    left: 15px;
+} 
+.section .main .content.details  .one .part form.edit-now  .up div input{
+    border: 1px solid var(--default-color);
+    font-weight: 500;
+}
+
+
+
+.section .main .content.details  .one .part form.email .up
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section .main .content.details  .one .part form.email .up >.btns
+{
+    display: flex;
+
+}
+.section .main .content.details  .one .part form.email .inp-box
+{
+    min-width: 400px;
+}
+
+
+.section .main .content.details  .one .part form.email.edit-now  .not-valid input,
+.section .main .content.details  .one .part form.email.edit-now  .null input{
+    border-color: #dc3545 ;
+}
+.section .main .content.details  .one .part form.email.edit-now  .not-valid span,
+.section .main .content.details  .one .part form.email.edit-now  .null span{
+    color: #dc3545 ;
+}
+
+.section .main .content.details  .one .part form.email  p{
+    margin: 10px 0 0 5px;
+    display: none;
+    color: #dc3545 ;
+    font-size: 14px;
+}
+.section .main .content.details  .one .part form.email.edit-now  .not-valid p{
+    display: block;
+}
+
+
+
+.section .main .content.details  .one .part form.pass .up{
+    display: flex;
+}
+.section .main .content.details  .one .part form.pass .up>div{
+    flex: 1;
+}
+.section .main .content.details  .one .part form.pass .up .right{
+display: flex;
+justify-content: flex-end;
+align-items: flex-end;
+}
+.section .main .content.details  .one .part form.pass .up .left{
+display: flex;
+flex-direction: column;
+gap: 40px;
+}
+.section .main .content.details  .one .part form.pass .up .left .inp-box{
+    height: 60px;
+    width: 100%;
+}
+.section .main .content.details  .one .part form.pass .up .left .inp-box input{
+    height: 100%;
+    padding: 10px 40px 10px 15px;
+    font-size: 30px;
+}
+.section .main .content.details  .one .part form.pass .up .left  p{
+    margin: 10px 0 0 5px;
+    display: none;
+    color: #dc3545 ;
+    font-size: 14px;
+
+}
+.section .main .content.details  .one .part form.pass .up .left .new-pass  p{
+    font-size: 13px;
+    display: block;
+    color: var(--hover-color);
+}
+.section .main .content.details  .one .part form.pass .up .left .new-pass .inp-box.null + p{
+    color: #dc3545;
+}
+.section .main .content.details  .one .part form.pass .up .left .not-valid input,
+.section .main .content.details  .one .part form.pass .up .left .null input{
+    border-color: #dc3545 ;
+}
+.section .main .content.details  .one .part form.pass .up .left .not-valid span,
+.section .main .content.details  .one .part form.pass .up .left .null span{
+    color: #dc3545 ;
+}
+.section .main .content.details  .one .part form.pass .up .left .not-valid  p{
+    margin: 10px 0 0 5px;
+    display: block;
+}
+
+.section .main .content.details  .one .part form.pass .up .left .inp-box input +i 
+{
+    position: absolute;
+    color: var(--disabled-color);
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px;
+}
+.section .main .content.details  .one .part form.pass .up .left .inp-box input[type='text'] 
+{
+    font-size: 14px;
+}
+
+@media (max-width:750px) {
+    .section .main .content.details .one .part form.info .up {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .section .main .content.details .one .part form.info .up > div {
+        width: 100%;
+    }
+    .section .main .content.details .one .part form.email .up {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .section .main .content.details .one .part form.email .up .eml-box {
+        width: 100%;
+    }
+    .section .main .content.details .one .part form.pass .up {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .section .main .content.details .one .part form.email .inp-box {
+        min-width: 100%;
+    }
+}

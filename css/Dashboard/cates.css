@@ -1,0 +1,286 @@
+
+:root {
+    --default-color:#7988FD;
+    --hover-color:#5865d9;
+    --disabled-color:#949494;
+    --input-color:#E8E8E8;
+  }
+  .hide
+  {
+    display: none;
+  }
+.content
+{
+   height: 100vh;
+}
+
+.content .tabs 
+{
+    display: flex;
+    background-color: #f1f5f9;
+    height: 70px;
+}
+
+.content .tabs li a
+{
+    display: inline-block;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width:500px) {
+    .content .tabs li a
+{
+    font-size: 20px;
+    padding: 10px;
+}
+}
+.content .tabs li:hover a
+{
+        color: var(--default-color);
+
+}
+.content .tabs li.active a
+{
+    background-color:white;
+    color: var(--hover-color);
+
+}
+.content .tabs li a
+{
+    color: black;
+    width: 100%;
+    height: 100%;
+
+}
+
+.content .parent
+{
+    background-color: white;
+    flex-grow: 1;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    height: calc(100% - 70px);
+}
+
+.content .parent .for-pad
+{
+    padding: 10px;
+    width: 100%;
+    overflow: auto;
+}
+
+.content .parent .table {
+    border: 1px solid var(--input-color);
+    height: 100%;
+    border-radius: 10px;
+    min-width: 660px;
+}
+.content .parent .table .table-head
+{
+    height: 50px;
+}
+.content .parent .table .table-head .row
+{
+    height: 100%;
+}
+
+.content .parent .table .head-cell {
+    text-align: center;
+    padding: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    border-right: 1px solid var(--input-color);
+    width: calc(100% / 3);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.content .parent .table .table-body
+{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    height: calc(100% - 50px);
+}
+
+
+.content .parent .table .row {
+    display: flex;
+    border-bottom: 1px solid var(--input-color);
+
+}
+
+.content .parent .table .body-cell {
+    background-color: #f2f2f2;
+    font-size: 16px;
+    display: flex;
+    width: calc(100% / 3);
+    align-items: center;
+    padding-left: 20px;
+    height: 50px;
+
+}
+.content .parent .table .body-cell .edit-input {
+    background-color: #f9f9f9;
+    border: 1px solid var(--disabled-color);
+    border-radius: 5px;
+    width: 90%;
+    padding: 5px;
+    font-size: 17px;
+    display: none;
+}
+
+.content .parent .table .body-cell:first-child {
+    color: var(--hover-color);
+    font-weight: 600;
+}
+
+.content .parent .table .body-cell:last-child {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.content .parent .table .body-cell .btn {
+    background-color: var(--default-color);
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.content .parent .table .body-cell .btn:hover {
+    background-color: var(--hover-color);
+} 
+.content .parent .table .body-cell .delete-btn {
+    background-color: #ff0000;
+
+}
+.content .parent .table .body-cell .cancel-btn {
+    background-color: var(--disabled-color);
+    display: none;
+}
+.content .parent .table .body-cell .cancel-btn:hover {
+    background-color: #747474;
+
+}
+
+.content .parent .table .body-cell .delete-btn:hover {
+    background-color: #e10000;
+}
+.content .parent .table .row .fin-edit-btn {
+    display: none;
+}
+.content .parent .table .row.edit-now .cat-name {
+    display: none;
+}
+.content .parent .table .row.edit-now .delete-btn {
+    display: none;
+}
+.content .parent .table .row.edit-now .cancel-btn {
+    display: block;
+}
+.content .parent .table .row.edit-now .fin-edit-btn {
+    display: block;
+}
+.content .parent .table .row.edit-now  .edit-input {
+    display: block;
+}
+.content .parent .table .row.edit-now .edit-btn
+{
+    display: none;
+}
+
+.content .parent .add-cate
+{
+    height: 100%;
+    width: 100%;
+    border: 1px solid var(--input-color);
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content .parent .add-cate h3
+{
+    margin: 0;
+    font-size: 40px;
+}
+.content .parent .add-cate form
+{
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media (max-width:950px) {
+    .content .parent .add-cate form
+{
+    flex-direction: column;
+    gap: 30px;
+}
+}
+.content .parent .add-cate form label
+{
+    font-weight: 500;
+}
+.content .parent .add-cate form input[type='text'],
+.content .parent .add-cate form select
+{
+    background-color: var(--input-color);
+    padding: 10px;
+    border: 1px solid var(--disabled-color);
+    border-radius: 5px;
+    width: 200px;
+    max-width: 100%;
+    font-size: 16px;
+
+
+}
+.content .parent .add-cate form select:invalid
+{
+    color: var(--disabled-color);
+}
+.content .parent .add-cate form select option
+{
+    color: black;
+}
+.content .parent .add-cate form input[type='submit']
+{
+    background-color: var(--default-color);
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    font-size: 20px;
+    width: 200px;
+}
+.content .parent .add-cate form input[type='submit']:hover {
+    background-color: var(--hover-color);
+} 
+
+@media (max-width:500px) {
+    .content .tabs li a
+{
+    font-size: 20px;
+    padding: 10px;
+}
+.content .parent .add-cate h3 {
+    font-size: 30px;
+}
+}

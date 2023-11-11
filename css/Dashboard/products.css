@@ -1,0 +1,650 @@
+
+:root {
+    --default-color:#7988FD;
+    --hover-color:#5865d9;
+    --disabled-color:#949494;
+    --input-color:#E8E8E8;
+  }
+  .hide
+  {
+    display: none;
+  }
+.content
+{
+   height: 100vh;
+}
+
+.content .parent
+{
+    background-color: white;
+    flex-grow: 1;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    height:100%;
+}
+
+.content .parent .for-pad
+{
+    padding: 10px;
+    width: 100%;
+}
+.content .parent .for-pad:first-child
+{
+    display: grid;
+    grid-template-rows: 50px 1fr;
+}
+.content .parent .filter
+{
+    height: 50px;
+    width: 100%;
+    border: 1px solid var(--input-color);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+
+}
+
+.content .parent .filter .srch-box {
+    display: flex;
+    overflow: hidden;
+    height: 90%;
+}
+
+.content .parent .filter .srch-text {
+    position: relative;
+    height: 100%;
+    max-height: 100%;
+    width: 200px;
+}
+
+.content .parent .filter .srch-text input {
+    background-color: var(--input-color);
+    padding: 10px 10px 10px 25px;
+    border: 1px solid var(--disabled-color);
+    border-right: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height: 100%;
+    width: 100%;
+    font-size: 14px;
+}
+
+.content .parent .filter .srch-text i {
+    position: absolute;
+    top: 50%;
+    left: 6px;
+    transform: translateY(-50%);
+    color: #949494;
+    font-size: 11px;
+
+}
+
+.content .parent .filter .srch-btn {
+    position: relative;
+    height: 100%;
+    max-height: 100%;
+    cursor: pointer;
+}
+
+.content .parent .filter .srch-btn input {
+    width: 40px;
+    border: 0;
+    background-color: var(--default-color);
+    height: 100%;
+    cursor: pointer;
+    border: 1px solid var(--disabled-color);
+    border-left:0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition-duration: 0.2s;
+}
+
+.content .parent .filter .srch-btn:hover input {
+    background-color: var(--hover-color);
+}
+
+.content .parent .filter .srch-btn::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.content .parent .filter .right {
+    display: flex;
+    gap: 10px;
+    height: 100%;
+}
+.content .parent .filter .right select
+{
+    background-color: var(--input-color);
+    border: 1px solid var(--disabled-color);
+    border-radius: 5px;
+    width: 100px;
+    height: 100%;
+    margin-left: 5px;
+}
+
+@media (max-width:900px) {
+    .content .parent .filter .srch-text {
+
+        width: 150px;
+    }
+    .content .parent .filter .right >div
+{
+
+    font-size: 14px;
+}
+    .content .parent .filter .right select
+{
+
+    border-radius: 5px;
+    width: 70px;
+}
+}
+
+@media (max-width:650px) {
+    .content .parent .filter .srch-text {
+
+        width: 100px;
+    }
+    .content .parent .filter .right >div
+{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 12px;
+
+}
+    .content .parent .filter .right select
+{
+
+    margin: 0;
+}
+}
+
+.content .parent .wrap {
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 100%;
+    width: 100%;
+}
+.content .parent .table {
+    border: 1px solid var(--input-color);
+    height: 85%;
+    border-radius: 10px;
+}
+.content  .parent .wrap .table {
+    min-width: 1000px;
+}
+.content .parent .table .table-head
+{
+    height: 60px;
+}
+.content .parent .table .table-head .row
+{
+    height: 100%;
+}
+
+.content .parent .table .head-cell {
+    text-align: center;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    border-right: 1px solid var(--input-color);
+    width: calc(100% / 3);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.content .parent .table .table-body
+{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    height: 100%;
+}
+
+
+.content .parent .table .row {
+    display: flex;
+    border-bottom: 1px solid var(--input-color);
+
+}
+
+.content .parent .table .body-cell {
+    background-color: #f2f2f2;
+    font-size: 12px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding-left: 20px;
+    height: 50px;
+
+}
+.content .parent .table .body-cell .edit-input {
+    background-color: #f9f9f9;
+    border: 1px solid var(--disabled-color);
+    border-radius: 5px;
+    width: 90%;
+    padding: 5px;
+    font-size: 17px;
+    display: none;
+}
+
+.content .parent .table .body-cell:first-child {
+    color: var(--hover-color);
+    font-weight: 600;
+}
+
+.content .parent .table .body-cell:last-child {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.content .parent .table .body-cell .btn {
+    background-color: var(--default-color);
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.content .parent .table .body-cell .btn:hover {
+    background-color: var(--hover-color);
+} 
+.content .parent .table .body-cell .delete-btn {
+    background-color: #ff0000;
+
+}
+.content .parent .table .body-cell .cancel-btn {
+    background-color: var(--disabled-color);
+    display: none;
+}
+.content .parent .table .body-cell .cancel-btn:hover {
+    background-color: #747474;
+
+}
+
+.content .parent .table .body-cell .delete-btn:hover {
+    background-color: #e10000;
+}
+.content .parent .table .row .fin-edit-btn {
+    display: none;
+}
+.content .parent .table .row.edit-now .stock-num {
+    display: none;
+}
+
+.content .parent .table .row.edit-now .delete-btn {
+    display: none;
+}
+.content .parent .table .row.edit-now .cancel-btn {
+    display: block;
+}
+.content .parent .table .row.edit-now .fin-edit-btn {
+    display: block;
+}
+.content .parent .table .row.edit-now  .edit-input {
+    display: block;
+}
+.content .parent .table .row.edit-now .edit-btn
+{
+    display: none;
+}
+
+
+form.add-pro
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+        height: 100%;
+        max-width: 100%;
+}
+form.add-pro .head
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+form.add-pro .head.sec-head
+{
+    display: none;
+
+}
+
+form.add-pro .head h3
+{
+    font-size: 22px;
+    margin: 0;
+}
+
+form.add-pro .head input
+{
+    background-color: var(--default-color);
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    font-size: 30px;
+    width: 300px;
+}
+
+
+form.add-pro .up
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    max-width: 100%;
+    gap: 20px;
+}
+form.add-pro .up input,
+form.add-pro .up  .select-box select
+{
+    background-color: var(--input-color);
+    padding: 10px;
+    border: 1px solid var(--disabled-color);
+    border-radius: 5px;
+    width: 100%;    
+}
+form.add-pro .up .select-box
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;    
+
+    
+}
+form.add-pro .up  .select-box select:invalid
+{
+    color: var(--disabled-color);
+}
+form.add-pro .up  .select-box select option
+{
+    color: black;
+}
+form.add-pro .down
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+
+
+form.add-pro .down textarea
+{
+    width: 100%;
+    background-color: var(--input-color);
+    border: 1px solid var(--disabled-color);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    height: 100%;
+    resize: none;
+}
+
+
+form.add-pro .down .spec
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid var(--input-color);
+    border-radius: 5px;
+    padding: 10px;
+}
+form.add-pro .down .spec h6
+{
+    margin: 0;
+    
+}
+
+
+form.add-pro .down .spec .inps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+form.add-pro .down .spec .inps  #add-fea{
+    color: white;
+    background-color: var(--default-color);
+    border-radius: 2px;
+    padding: 3px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+form.add-pro .down .spec .inps  #add-fea:hover{
+    background-color: var(--hover-color);
+
+}
+form.add-pro .down .spec input {
+    background-color: var(--input-color);
+    padding: 3px;
+    border: 1px solid var(--disabled-color);
+    border-radius: 5px;
+    width: 40%;
+    font-size: 14px;
+
+}
+
+form.add-pro .down .spec .table {
+    border: 1px solid var(--input-color);
+    border-radius: 10px;
+    height: 120px;
+    flex-grow: 1;
+}
+form.add-pro .down .spec .table .table-head
+{
+    height: 25px;
+}
+
+form.add-pro .down .spec .table .head-cell {
+    text-align: center;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    border-right: 1px solid var(--input-color);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+form.add-pro .down .spec .table .table-body
+{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    height: calc(100% - 25px);
+}
+
+
+form.add-pro .down .spec .table .row {
+    display: flex;
+    border-bottom: 1px solid var(--input-color);
+    justify-content: space-between;
+
+}
+
+form.add-pro .down .spec .table .body-cell {
+    background-color: #f2f2f2;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    height: 20px;
+    width: 100%;
+}
+
+form.add-pro .down .spec .table .body-cell:first-child {
+    color: var(--hover-color);
+}
+
+form.add-pro .down .spec .table .body-cell:last-child {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+    width: 20%;
+}
+
+form.add-pro .down .spec .table .head-cell:last-child {
+    padding: 0;
+    width: 20%;
+}
+
+form.add-pro .down .spec .table .body-cell:last-child span{
+    color: #ff0000;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+form.add-pro .down .spec .table .body-cell:last-child span:hover{
+    color: #e10000;
+}
+
+
+form.add-pro .down .add-img
+{
+    width: 100%;
+    border: 1px solid var(--input-color);
+    height: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+
+
+form.add-pro .down .add-img label
+{
+    font-weight: 500;
+}
+
+
+
+
+form.add-pro .down .add-img .show-imgs
+{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--input-color) ;
+    height: 110px;
+    border-radius: 5px;
+    overflow: auto;
+    flex-grow: 1;
+}
+
+
+
+form.add-pro .down .add-img .show-imgs .one
+{
+    border-bottom: 1px solid var(--input-color) ;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+
+form.add-pro .down .add-img .show-imgs .one .img
+{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    border-radius: 3px;
+    border: 1px solid var(--input-color);
+}
+
+
+form.add-pro .down .add-img .show-imgs .one .img img
+{
+    width: 100%;
+    max-height: 100%;
+}
+
+
+@media (max-width:700px) {
+
+    .page
+    {
+        height: fit-content;
+    }
+
+    .content
+{
+   height: fit-content;
+}
+    
+form.add-pro .head:first-child
+{
+    justify-content: flex-end;
+    order: 5;
+}
+form.add-pro .head h3
+{
+    font-size: 22px;
+    margin: 0;
+}
+
+form.add-pro .head:first-child h3
+{
+    display: none;
+}
+
+form.add-pro .head input
+{
+    width: 200px;
+}
+form.add-pro .head.sec-head 
+{
+    display: flex;
+}
+
+
+form.add-pro .up
+{
+    flex-direction: column;
+
+}
+
+form.add-pro .down
+{
+    flex-direction: column;
+}
+
+
+
+    
+}

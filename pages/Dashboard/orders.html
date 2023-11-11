@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../../css/all.min.css" />
+    <link rel="stylesheet" href="../../css/normalize.css" />
+    <link rel="stylesheet" href="../../css/master.css" />
+    <link rel="stylesheet" href="../../css/Dashboard/dash.css" />
+    <link rel="stylesheet" href="../../css/Dashboard/orders.css" />
+    <link rel="icon" href="../images/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+        <title>Dashboard - Orders</title>
+
+
+</head>
+
+<body>
+
+    <div class="page">
+
+
+
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a class="" href="categories.html">
+                        <i class="fa-solid fa-rectangle-list"></i>
+                        <span>Categories</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="products.html">
+                        <i class="fa-solid fa-box"></i>
+                        <span>Products</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="active" href="orders.html">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span>Orders</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="users.html">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Users</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="../../php/sign/signout.php">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span>Exit</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+
+        <div class="content">
+
+            <div class="parent">
+
+
+
+                <div class="for-pad">
+                    <div class="filter">
+                        <div class="srch-box">
+
+                            <div class="srch-text">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input type="text" placeholder="Search" id="srch-box-input">
+                            </div>
+
+                            <div class="srch-btn fa-solid fa-magnifying-glass" id="srch-btn-input">
+                                <input type="button">
+                            </div>
+
+                        </div>
+                        <div class="right">
+                            <div>
+                                <label for="">Status :</label>
+                                <select>
+                                    <option value="all" selected="">All</option>
+                                    <option value="1">Processing</option>
+                                    <option value="2">In Delivery</option>
+                                    <option value="3">Delivered</option>
+                                    <option value="4">Canceled</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrap">
+                        <div class="table">
+                            <div class="table-head">
+    
+                                <div class="row">
+                                    <div class="head-cell">Order ID</div>
+                                    <div class="head-cell">User Name</div>
+                                    <div class="head-cell">Email</div>
+                                    <div class="head-cell">Date</div>
+                                    <div class="head-cell">Status</div>
+                                    <div class="head-cell">Total</div>
+                                    <div class="head-cell"></div>
+                                </div>
+                            </div>
+    
+                            <div class="table-body">
+    
+    <!-- 
+                                <div class="row" data-orderid="">
+                                    <div class="body-cell">#123</div>
+                                    <div class="body-cell">Asd</div>
+                                    <div class="body-cell">Asd</div>
+                                    <div class="body-cell">#123</div>
+                                    <div class="body-cell">#123</div>
+                                    <div class="body-cell">#123</div>
+                                    <div class="body-cell">
+                                        <span class="view-btn btn">View</span>
+                                    </div>
+                                </div> -->
+    
+    
+                            </div>
+    
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="for-pad viewCont">
+                    <div class="parent-view">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="../../js/Dashboard/orders.js"> </script>
+</body>
+
+</html>

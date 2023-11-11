@@ -1,0 +1,109 @@
+CREATE TABLE users(
+    user_id int AUTO_INCREMENT,
+    fname varchar(30) NOT NULL ,
+    lname varchar(30) NOT NULL,
+    email varchar(50) NOT NULL,
+    pass varchar(350) NOT NULL,
+    phone varchar(30) NOT NULL,
+    PRIMARY KEY (user_id)
+);
+
+CREATE TABLE addresses(
+    add_id int AUTO_INCREMENT,
+    user_id int,
+    country varchar(30),
+    street varchar(100),
+    city varchar(20),
+    build LONGTEXT,
+    phone varchar(30),
+    note LONGTEXT,
+    is_default int NOT NULL ,
+    PRIMARY KEY (add_id),
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+
+CREATE TABLE orders(
+    order_id int AUTO_INCREMENT,
+    user_id int,
+    datee date NOT NULL,
+    address LONGTEXT,
+    total_price float(20,2) NOT NULL,
+    order_status int,
+    PRIMARY KEY (order_id),
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+
+
+CREATE TABLE cates(
+    cat_id int AUTO_INCREMENT,
+    cat_name varchar(30) NOT NULL,
+    PRIMARY KEY(cat_id)
+);
+
+CREATE TABLE sub_cates(
+    subcat_id int AUTO_INCREMENT,
+    cat_id int,
+    subcat_name varchar(30) NOT NULL,
+    PRIMARY KEY(subcat_id),
+    FOREIGN KEY (cat_id) REFERENCES cates(cat_id)
+);
+
+
+CREATE TABLE products(
+    pro_id int AUTO_INCREMENT,
+    subcat_id int,
+    pro_name varchar(30) NOT NULL,
+    disc LONGTEXT,
+    spec LONGTEXT,
+    price float(20,2) NOT NULL,
+    stock int,
+    PRIMARY KEY(pro_id),
+    FOREIGN KEY (subcat_id) REFERENCES sub_cates(subcat_id)
+);
+
+
+    
+    
+CREATE TABLE order_items(
+    order_id int,
+    pro_id int,
+    pro_name varchar(30),
+    path varchar(200),
+    price float(20,2),
+    quant int NOT NULL,
+    total_price float(20,2) NOT NULL,
+    total_quant int,
+    PRIMARY KEY (order_id,pro_id),
+    FOREIGN KEY (order_id) REFERENCES orders(order_id)
+);
+
+
+
+CREATE TABLE pro_imgs(
+    img_id int AUTO_INCREMENT,
+    pro_id int,
+    path varchar(200) NOT NULL,
+    is_default int NOT NULL,
+    PRIMARY KEY (img_id),
+    FOREIGN KEY (pro_id) REFERENCES products(pro_id)
+);
+
+CREATE TABLE cart(
+    user_id int,
+    pro_id int,
+    quant int NOT NULL,
+    total_price float(20,2) NOT NULL,
+    PRIMARY KEY (user_id,pro_id),
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (pro_id) REFERENCES products(pro_id)
+);
+
+CREATE TABLE reviews(
+    rev_id int AUTO_INCREMENT,
+    user_id int,
+    pro_id int,
+    rev_text LONGTEXT NOT NULL,
+    PRIMARY KEY (rev_id),
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (pro_id) REFERENCES products(pro_id)
+);

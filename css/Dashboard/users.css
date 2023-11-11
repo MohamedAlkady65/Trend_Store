@@ -1,0 +1,222 @@
+:root {
+    --default-color:#7988FD;
+    --hover-color:#5865d9;
+    --disabled-color:#949494;
+    --input-color:#E8E8E8;
+  }
+  .hide
+  {
+    display: none;
+  }
+.content
+{
+   height: 100vh;
+}
+
+
+.content .parent
+{
+    background-color: white;
+    flex-grow: 1;
+    height:100%;
+}
+
+.content .parent .for-pad
+{
+    padding: 10px;
+    width: 100%;
+    max-height: 100%;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+}
+.content .parent .filter
+{
+    height: 50px;
+    width: 100%;
+    border: 1px solid var(--input-color);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+
+}
+
+.content .parent .filter .srch-box {
+    display: flex;
+    overflow: hidden;
+    height: 90%;
+}
+
+.content .parent .filter .srch-text {
+    position: relative;
+    height: 100%;
+    max-height: 100%;
+    width: 200px;
+}
+
+.content .parent .filter .srch-text input {
+    background-color: var(--input-color);
+    padding: 10px 10px 10px 25px;
+    border: 1px solid var(--disabled-color);
+    border-right: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height: 100%;
+    width: 100%;
+    font-size: 14px;
+}
+
+.content .parent .filter .srch-text i {
+    position: absolute;
+    top: 50%;
+    left: 6px;
+    transform: translateY(-50%);
+    color: #949494;
+    font-size: 11px;
+
+}
+
+.content .parent .filter .srch-btn {
+    position: relative;
+    height: 100%;
+    max-height: 100%;
+    cursor: pointer;
+}
+
+.content .parent .filter .srch-btn input {
+    width: 40px;
+    border: 0;
+    background-color: var(--default-color);
+    height: 100%;
+    cursor: pointer;
+    border: 1px solid var(--disabled-color);
+    border-left:0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition-duration: 0.2s;
+}
+
+.content .parent .filter .srch-btn:hover input {
+    background-color: var(--hover-color);
+}
+
+.content .parent .filter .srch-btn::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.content .parent .filter .right {
+    display: flex;
+    gap: 10px;
+    height: 100%;
+}
+.content .parent .filter .right select
+{
+    background-color: var(--input-color);
+    border: 1px solid var(--disabled-color);
+    border-radius: 5px;
+    width: 100px;
+    height: 100%;
+    margin-left: 5px;
+}
+
+.content .parent .wrap {
+    width: 100%;
+    overflow: auto;
+}
+.content .parent .table {
+    border: 1px solid var(--input-color);
+    height: calc(100% - 60px);
+    border-radius: 10px;
+    min-width: 660px;
+}
+.content .parent .table .table-head
+{
+    height: 60px;
+}
+.content .parent .table .table-head .row
+{
+    height: 100%;
+}
+
+.content .parent .table .head-cell {
+    text-align: center;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    border-right: 1px solid var(--input-color);
+    width: calc(100% / 3);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.content .parent .table .table-body
+{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    height: 100%;
+}
+
+
+.content .parent .table .row {
+    display: flex;
+    border-bottom: 1px solid var(--input-color);
+
+}
+
+.content .parent .table .body-cell {
+    background-color: #f2f2f2;
+    font-size: 12px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding-left: 20px;
+    height: 80px;
+    overflow: hidden;
+
+}
+.content .parent .table .body-cell .num {
+    font-weight: 600;
+
+}
+.content .parent .table .body-cell p {
+margin: 0;
+}
+.content .parent .table .body-cell.bold-text {
+    font-weight: 500;
+
+}
+
+.content .parent .table .body-cell:first-child {
+    color: var(--hover-color);
+    font-weight: 600;
+}
+
+.content .parent .table .body-cell:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center ;
+    gap: 10px;
+}
+
+.content .parent .table .body-cell .btn {
+    background-color: var(--default-color);
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    padding: 5px 0px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    font-size: 16px;
+    width: 80%;
+    text-align: center;
+}
+

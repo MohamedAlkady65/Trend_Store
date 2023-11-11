@@ -1,0 +1,133 @@
+:root {
+    --default-color:#7988FD;
+    --hover-color:#5865d9;
+    --disabled-color:#949494;
+    --input-color:#E8E8E8;
+  }
+body{
+    background-color: #f6f6f6;
+}
+
+.section .head h2{
+    font-size: 50px;
+    margin: 30px;
+}
+
+.section .main
+{
+    display: flex;
+    height: 100%;
+    gap: 10px;
+}
+
+.section .main .side-bar
+{
+    width: 250px;
+}
+
+
+
+.section .main .side-bar ul
+{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 18px;
+    align-items: center;
+    color: black;
+    font-weight: 600;
+    width: 100%;
+    margin: 20px 0 0 0;
+
+}
+.section .main .side-bar ul li
+{
+    width: 100%;
+}
+.section .main .side-bar ul li a
+{
+    display: inline-block;
+    color: var(--default-color);
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    transition-duration: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.section .main .side-bar ul li a i
+{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+
+}
+.section .main .side-bar ul li a span
+{
+    /* display: none; */
+    flex-grow: 1;
+
+}
+.section .main .side-bar ul li a.active
+{
+    background-color: #7988fd12;
+}
+.section .main .side-bar ul li a:hover
+{
+    background-color: #7988fd0f;
+}
+.section .main .content
+{
+    background-color: white;
+    flex-grow: 1;
+    border-radius: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    padding: 30px;
+}
+.section .main .content h3{
+    font-size: 40px;
+    margin: 30px;
+    margin-top: 0;
+
+}
+
+@media (max-width:920px) {
+    .section .main .side-bar ul li a 
+{
+    padding: 10px;
+}
+    .section .main .side-bar ul li a i
+{
+
+    margin: 0;
+}
+    .section .main .side-bar ul li a span
+{
+    display: none;
+
+}
+.section .main .side-bar
+{
+    width: fit-content;
+}
+    
+}
+
+@media (max-width:500px) {
+
+.section .head h2{
+    font-size: 40px;
+    margin: 20px;
+}
+.section .main .content h3{
+    font-size: 30px;
+    margin: 20px;
+    margin-top: 0;
+}
+    
+}
